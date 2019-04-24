@@ -1,0 +1,81 @@
+@media screen and (max-width: 1090px) {
+
+	.wrapper {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	footer div {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	section .wrapper {
+		flex-direction: column;
+		align-items: center; 
+	}
+
+	.ajuda {
+		order: 2;
+		width: 150px;
+	}
+
+	.sorteios {
+		width: 98%;
+		margin: 1em 0;
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 530px) {
+	.nome-usuario {
+		display: none;
+	}
+
+	.wrapper-online {
+		background-color: initial;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.wrapper-online span {
+		display: none;
+		
+	}
+
+	.nav-inferior .wrapper {
+		font-size: 10pt;
+	}
+
+	h1 {
+		font-size: 18pt;
+	}
+
+	.cupom-codigo input {
+		width: 80%;
+	}
+	
+}
+
+@media screen and (max-width: 420px) {
+	.cupom-codigo button .fa-chevron-right {
+		display: none;
+	}
+
+	.cupom-codigo button {
+		font-size: 9pt;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.nav-inferior .wrapper {
+		font-size: 8pt;
+	}
+
+	.cupom-codigo input {
+		width: 75%;
+	}
+}

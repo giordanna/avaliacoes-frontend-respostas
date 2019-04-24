@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Legends</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" offset="3">
+        <ion-list>
+
+          <ion-list-header>
+            <ion-label>List of Names</ion-label>
+          </ion-list-header>
+          
+          <!-- Desafio
+          Não estou conseguindo atualizar a lista em legends.service.ts 
+          porque ion-reorder-group não está disparando o evento ionItemReorder.
+          Visto nessa issue: https://github.com/ionic-team/ionic/issues/14640 -->
+          <ion-reorder-group reorder="true" (ionItemReorder)="dispararEvento($event)" disabled="false">
+            
+            <!-- Questão 3A: mostrando lista de lendas -->
+            <ion-item lines="full" *ngFor="let lenda of legends">
+              <ion-label>
+                {{lenda}}
+              </ion-label>
+
+              <ion-reorder></ion-reorder>
+            </ion-item>
+
+          </ion-reorder-group>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

@@ -1,0 +1,18 @@
+<ion-item lines="full">
+    <ion-label *ngIf="!editOn; else inputMode">
+        {{lenda}}
+    </ion-label>
+    <ng-template #inputMode>
+        <ion-input 
+            [(ngModel)]="lenda"
+            clearInput="true"
+            color="danger">
+        </ion-input>
+    </ng-template>
+    
+
+
+    <ion-button fill="outline" color="secondary" (click)="mudarModo()" [disabled]="lenda === ''">
+        {{ !editOn ? "Edit" : "Save" }}
+    </ion-button>
+</ion-item>
